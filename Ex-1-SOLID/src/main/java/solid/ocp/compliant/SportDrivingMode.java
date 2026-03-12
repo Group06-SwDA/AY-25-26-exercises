@@ -1,6 +1,6 @@
 package solid.ocp.compliant;
 
-public class SportDrivingMode implements DrivingModeStrategy {
+public class SportDrivingMode implements DrivingMode {
 
     @Override
     public void apply(Vehicle vehicle) {

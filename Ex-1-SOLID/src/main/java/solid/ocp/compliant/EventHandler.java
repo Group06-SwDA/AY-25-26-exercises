@@ -9,7 +9,7 @@ public class EventHandler {
         this.vehicle = vehicle;
     }
 
-    public void changeDrivingMode(DrivingModeStrategy mode){
+    public void changeDrivingMode(DrivingMode mode){
         mode.apply(vehicle);
     }
 }
