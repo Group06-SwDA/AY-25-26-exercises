@@ -1,0 +1,5 @@
+/target
+/bin
+/src/site
+/.vscode
+.DS_Store
