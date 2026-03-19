@@ -1,4 +1,4 @@
-package solid.dip.compliant;
+package solid.dip.compliant2;
 
 public class Printer implements IPrinter{
 
