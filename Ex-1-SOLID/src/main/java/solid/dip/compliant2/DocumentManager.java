@@ -10,7 +10,7 @@ public class DocumentManager {
     public DocumentManager(String text) {
         this.text = text;
         factory = new PrinterFactory();
-        pService = factory.creatPrinter();
+        pService = factory.createPrinter();
     }
 
     public void addText(String text) {
