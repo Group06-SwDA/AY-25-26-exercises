@@ -5,7 +5,7 @@ import compliant.payroll.SalaryCalculator;
 
 public class SalaryCalculatorFactory implements ICalculatorFactory{
     @Override
-    public ISalaryCalculator creCalculator(){
+    public ISalaryCalculator createCalculator(){
         return new SalaryCalculator();
     }
 }

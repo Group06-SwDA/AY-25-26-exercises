@@ -13,7 +13,7 @@ public class PayrollManager {
         AbstrEmployee fp = fullProfFactory.createEmployee(LocalDate.of(2005, 03, 1),"Subito", "Giovanni",123);
         AbstrEmployee ap = associateProfFactory.createEmployee(LocalDate.of(2015,04,01 ), "Trapani", "Chiara", 628);
         AbstrEmployee hod = headOfDepartmentFactory.createEmployee(LocalDate.of(1995, 2, 1), "Magno", "Alessandro", 64);
-        ISalaryCalculator salaryCalculator = salaryCalculatorFactory.creCalculator();
+        ISalaryCalculator salaryCalculator = salaryCalculatorFactory.createCalculator();
         double monthlySalaryTemp = 0; 
 
         monthlySalaryTemp = salaryCalculator.calculateSalary(fp); //compute monthly gross salary 
