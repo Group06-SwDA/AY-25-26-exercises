@@ -33,13 +33,10 @@ public abstract class AbstrEmployee {
         return id;
     }
 
+    public ITaxCalculator geTaxCalculator(){
+        return this.taxCalculator;
+    }
+
     public abstract double getBaseSalary();
     public abstract double getYearsMultiplier();
-
-    public double getSalaryAfterTax(double monthlySalary){
-        double yearlyIncome = monthlySalary*12;
-        double yearlyTax = taxCalculator.calculateTax(yearlyIncome);
-        double monthlyTax = yearlyTax /12;
-        return monthlySalary -monthlyTax;
-    }
 }

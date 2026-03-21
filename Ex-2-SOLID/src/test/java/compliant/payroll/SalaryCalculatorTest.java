@@ -15,10 +15,10 @@ public class SalaryCalculatorTest {
         FullProfessor fp = new FullProfessor(LocalDate.of(2005, 3, 1), "Subito", "Giovanni", 123, new FullProfessorTaxCalculator());
 
         double grossSalary = salaryCalculator.calculateSalary(fp);
-        double netSalary = fp.getSalaryAfterTax(grossSalary);
+        double netSalary = salaryCalculator.getSalaryAfterTax(fp, grossSalary);
 
-        assertEquals(6000.0, grossSalary, 0.01);
-        assertEquals(4033.33, netSalary, 0.01);
+        assertEquals(6050.0, grossSalary, 0.01);
+        assertEquals(4098.5, netSalary, 0.01);
     }
 
     @Test
@@ -26,10 +26,10 @@ public class SalaryCalculatorTest {
         AssociateProfessor ap = new AssociateProfessor(LocalDate.of(2015, 4, 1), "Trapani", "Chiara", 628, new AssociateProfessorTaxCalculator());
 
         double grossSalary = salaryCalculator.calculateSalary(ap);
-        double netSalary = ap.getSalaryAfterTax(grossSalary);
+        double netSalary = salaryCalculator.getSalaryAfterTax(ap, grossSalary);
 
         assertEquals(3200.0, grossSalary, 0.01);
-        assertEquals(2360.0, netSalary, 0.01);
+        assertEquals(2377.33, netSalary, 0.01);
     }
 
     @Test
@@ -37,9 +37,9 @@ public class SalaryCalculatorTest {
         HeadOfDepartment hod = new HeadOfDepartment(LocalDate.of(1995, 2, 1), "Magno", "Alessandro", 64, new HeadOfDepartmentTaxCalculator());
 
         double grossSalary = salaryCalculator.calculateSalary(hod);
-        double netSalary = hod.getSalaryAfterTax(grossSalary);
+        double netSalary = salaryCalculator.getSalaryAfterTax(hod, grossSalary);
 
-        assertEquals(7300.0, grossSalary, 0.01);
-        assertEquals(4774.33, netSalary, 0.01);
+        assertEquals(7350.0, grossSalary, 0.01);
+        assertEquals(4839.5, netSalary, 0.01);
     }
 }

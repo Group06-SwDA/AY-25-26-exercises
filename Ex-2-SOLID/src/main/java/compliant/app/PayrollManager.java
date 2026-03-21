@@ -16,16 +16,16 @@ public class PayrollManager {
 
         monthlySalaryTemp = salaryCalculator.calculateSalary(fp); //compute monthly gross salary 
         System.out.println("Gross monthly salary of " + fp.getSurname() + " : " + monthlySalaryTemp );  //print monthly gross salary
-        System.out.println("Net monthly salary of " + fp.getSurname() + " : " + fp.getSalaryAfterTax(monthlySalaryTemp)); //print monthly net salary
+        System.out.println("Net monthly salary of " + fp.getSurname() + " : " + salaryCalculator.getSalaryAfterTax(fp,monthlySalaryTemp)); //print monthly net salary
         
 
         monthlySalaryTemp = salaryCalculator.calculateSalary(ap);
         System.out.println("Gross monthly salary of " + ap.getSurname() + " : " + monthlySalaryTemp );
-        System.out.println("Net monthly salary of " + ap.getSurname() + " : " + ap.getSalaryAfterTax(monthlySalaryTemp));
+        System.out.println("Net monthly salary of " + ap.getSurname() + " : " + salaryCalculator.getSalaryAfterTax(ap,monthlySalaryTemp));
 
         monthlySalaryTemp = salaryCalculator.calculateSalary(hod);
         System.out.println("Gross monthly salary of " + hod.getSurname() + " : " + monthlySalaryTemp );
-        System.out.println("Net monthly salary of " + hod.getSurname() + " : " + hod.getSalaryAfterTax(monthlySalaryTemp));
+        System.out.println("Net monthly salary of " + hod.getSurname() + " : " + salaryCalculator.getSalaryAfterTax(hod,monthlySalaryTemp));
 
     }
 

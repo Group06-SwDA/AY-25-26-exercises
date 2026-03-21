@@ -13,4 +13,11 @@ public class SalaryCalculator implements ISalaryCalculator{
         salary+=years*employee.getYearsMultiplier();
         return salary;
     }
+    @Override
+    public double getSalaryAfterTax(AbstrEmployee empl, double monthlySalary){
+        double yearlyIncome = monthlySalary*12;
+        double yearlyTax = empl.geTaxCalculator().calculateTax(yearlyIncome);
+        double monthlyTax = yearlyTax /12;
+        return monthlySalary -monthlyTax;
+    }
 }
