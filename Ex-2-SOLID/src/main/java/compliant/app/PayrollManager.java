@@ -6,13 +6,11 @@ public class PayrollManager {
 
     public static void main(String[] args) {
         ICalculatorFactory salaryCalculatorFactory = new SalaryCalculatorFactory();
-        IEmployeeFactory fullProfFactory = new FullProfFactory();
-        IEmployeeFactory associateProfFactory = new AssociateProfFactory();
-        IEmployeeFactory headOfDepartmentFactory = new HeadOfDepartmentFactory();
+        IEmployeeFactory employeeFactory = new EmployeeFactory();
         
-        AbstrEmployee fp = fullProfFactory.createEmployee(LocalDate.of(2005, 03, 1),"Subito", "Giovanni",123);
-        AbstrEmployee ap = associateProfFactory.createEmployee(LocalDate.of(2015,04,01 ), "Trapani", "Chiara", 628);
-        AbstrEmployee hod = headOfDepartmentFactory.createEmployee(LocalDate.of(1995, 2, 1), "Magno", "Alessandro", 64);
+        AbstrEmployee fp = employeeFactory.createFullProfessor(LocalDate.of(2005, 03, 1),"Subito", "Giovanni",123);
+        AbstrEmployee ap = employeeFactory.createAssociatedProfessor(LocalDate.of(2015,04,01 ), "Trapani", "Chiara", 628);
+        AbstrEmployee hod = employeeFactory.createHeadOfDepartment(LocalDate.of(1995, 2, 1), "Magno", "Alessandro", 64);
         ISalaryCalculator salaryCalculator = salaryCalculatorFactory.createCalculator();
         double monthlySalaryTemp = 0; 
 
